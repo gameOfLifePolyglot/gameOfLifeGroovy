@@ -1,13 +1,13 @@
 package com.ghostbuster.groovy.gameoflife
 
-import groovy.transform.Canonical
 import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
+import groovy.transform.Sortable
 import groovy.transform.TupleConstructor
 
 @TupleConstructor(includeFields = true)
 @EqualsAndHashCode(includeFields = true)
-@Canonical
+@Sortable
 @CompileStatic
 class Life {
 

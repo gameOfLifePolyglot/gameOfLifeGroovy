@@ -26,10 +26,8 @@ final class Game {
         return intersectLivesWithPossiblesOf(life).size() == 3
     }
 
-    private Set<Life> intersectLivesWithPossiblesOf(Life life) {
-//        why this dont work!?
-//        return life.possibleNeighbours.intersect(lives)
-        return life.possibleNeighbours.findAll{ lives.contains(it) }.toSet()
+    private Collection<Life> intersectLivesWithPossiblesOf(Life life) {
+        return life.possibleNeighbours.intersect(lives)
     }
 
     boolean isAlive(Life life) {
